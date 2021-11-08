@@ -8,7 +8,7 @@ const projet = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8" id='projet'>
             <div className='flex flex-1 flex-col lg:flex-row justify-center items-center'> 
             <div className='mx-auto lg:w-1/2 w-full px-6 lg:px-0'>
-            <span className='lg:hidden block text-center lg:text-left'><Image src={Compass}alt=''/> </span>
+            <span className='lg:hidden block text-center lg:text-left'><Image src={Compass} alt='' width={50}/> </span>
             <h1 className='section-title my-5 lg:hidden block text-center '> LE PROJET</h1>
             <h4 className='section-subtitle my-5 lg:hidden block text-center'> CONSTRUISEZ VOTRE VILLA DE RÊVE SUR MESURE !</h4>
             <Image src={Projet} alt=''/>

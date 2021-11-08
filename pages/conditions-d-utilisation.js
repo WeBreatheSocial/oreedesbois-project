@@ -1,58 +1,9 @@
-import React, {useState} from 'react'
-import Image from 'next/image'
-import Send from '../public/svg/send.svg'
-import PureModal from 'react-pure-modal';
-import { useRouter } from "next/router";
-import 'react-pure-modal/dist/react-pure-modal.min.css';
+import React from 'react'
 
-
-const Form = () => {
-    const [Name, setName] = useState('');
-    const [Phone, setPhone] = useState('');
-    const [Email, setEmail] = useState('');
-    const [Message, setMessage] = useState('');
-
-    const [modal, setModal] = useState(false);
-    const router = useRouter();
-
-    const submitForm = async (e) => {
-        e.preventDefault()
-       const res = await fetch('/api/submit-form', {
-        method: 'POST',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
-        // body: JSON.stringify(Email.value),
-        body: JSON.stringify({ Name, Phone, Email, Message }),
-      });
-    
-      // console.log(Name, Company, Email)
-      if (res.status === 201) {
-        alert('Envoi confirmé', { type: 'success' });
-        router.push('/');
-      } else {
-        alert('Veuillez vérifier vos informations', { type: 'error' });
-      }
-      router.push('/');
-      // alert(JSON.stringify({ Name, Company, Number, Email, Website, Message }));
-    }
-
+export default function Home() {
     return (
-        <div className='mx-auto'>
-           <PureModal
-  header="NOTICE LÉGALE"
- 
-  width='90vw'
-  isOpen={modal}
-  closeButton="X"
-  closeButtonPosition="header"
-  onClose={() => {
-    setModal(false);
-    return true;
-  }}
->
-  <div className='px-12 overflowclass'>
-  <h4 className='section-subtitle'>Le présent site est publié par :</h4>
+      <div className=''>
+           <h4 className='section-subtitle'>Le présent site est publié par :</h4>
   <p className='section-p'>Sté MAJMAA EL KHEIR S.A.R.L au capital de 50.000.000,00 DH immatriculée au Registre du Commerce de Casablanca sous le numéro 32667 ayant son siège social Avenue Mohammed VI, Résidence Nahil A, Appt 14 3ème étage Gueliz Marrakech Maroc.</p>
   <h4 className='section-subtitle mt-5'>Propriété intellectuelle</h4>
   <p className='section-p'>L’ensemble des éléments qui figurent sur le site sont protégés par la législation internationale sur le droit d'auteur et le droit des marques. L’ensemble des éléments du site, les marques, logos, dessins, graphismes, chartes graphiques, icônes, textes, applications, scripts, fonctionnalité, ainsi que leur sélection ou combinaison apparaissant à l’adresse lebien-être.ma ou sur les sous-domaines associés, sont la propriété exclusive de MAJMAA EL KHEIR. L’accès au site n’entraîne aucune cession des droits susvisés. Les droits d’utilisation du site ne sont concédés que sous forme numérique aux fins de visualisation des pages consultées, à titre personnel, non cessible et non exclusif. L’utilisateur s’interdit de copier, reproduire, modifier, distribuer, afficher ou vendre, par quelque procédé ou forme que ce soit, en tout ou partie, tout élément du site ou se rapportant à celui-ci, par quelque procédé que ce soit, et pour toute autre finalité y compris à titre commercial, sans l’autorisation préalable et écrite. En cas d’utilisation illégale ou non autorisée du site, MAJMAA EL KHEIR se réserve le droit de prendre toute mesure adéquate qu’elle estime nécessaire et, le cas échéant, d’intenter toute action en justice appropriée, et/ou signaler l’infraction aux autorités judiciaires et de police.</p>
@@ -64,80 +15,8 @@ const Form = () => {
   <p className='section-p'>Les liens hypertextes présents sur le site et renvoyant à un site Internet tiers ne sauraient engager la responsabilité de MAJMAA EL KHEIR MAJMAA EL KHEIR n’exerçant aucun contrôle et n’ayant aucune maîtrise sur le contenu de tout site tiers, vous y accédez sous votre propre responsabilité. MAJMAA EL KHEIR ne saurait en aucun cas être tenue responsable du contenu ainsi que des produits ou services proposés sur tout site tiers.</p>
   <h4 className='section-subtitle mt-5'>Droit applicable</h4>
   <p className='section-p'>Le présent site et ses mentions légales sont soumis au droit marocain.</p>
-  </div>
-</PureModal>
-              <form method="POST" onSubmit={submitForm} className=' flex flex-col py-6  w-full mx-auto justify-center items-start'>
-                <input
-              name="Name"
-              id="Name"
-              type="text"
-              pattern=".{1,}"
-              required
-              title="1 caractère minimum"
-              placeholder="Nom et Prénom"
-              className='inputs'
-              value={Name}
-              autofocus
-            onChange={(e) => setName(e.target.value)}
-            />
-             <input
-              name="Email"
-              id="Email"
-              type="text"
-              pattern=".{1,}"
-              required
-              className='inputs'
-
-              title="1 caractère minimum"
-              placeholder="Email"
-              value={Email}
-            onChange={(e) => setEmail(e.target.value)}
-            />
-              <input
-              name="Phone"
-              id="Phone"
-              className='inputs'
-
-              type="text"
-              pattern=".{1,}"
-              required
-              title="1 caractère minimum"
-              placeholder="Numéro de téléphone"
-              value={Phone}
-            onChange={(e) => setPhone(e.target.value)}
-            />
-             <textarea
-              name="Message"
-              id="Message"
-              className='inputs h-28'
-
-              rows="2"
-              type="text"
-              // pattern=".{1,}"
-              // required
-              // title="1 caractère minimum"
-              placeholder="Message (Optionnel)"
-              value={Message}
-            onChange={(e) => setMessage(e.target.value)}
-            />
-<div className='term-ctn'> 
-<label className="checkbox"> 
-    <input className="checkbox-input" type="checkbox" required/>
-    <span className="checkbox-checkmark-box">
-      <span className="checkbox-checkmark"></span>
-      <span className=' max-w-4xl text-sm cursor-default font-normal'> Je déclare avoir lu <span className='terms-link' onClick={() => setModal(true)}>les conditions générales d’utilisation</span>, notamment la mention relative à la protection des données personnelles.
-    </span>
-</span>
-    </label>
-    </div>
-      <button className='btn-color btn-submit'> 
-    <span className='btn-text text-right'>Envoyer {'>'}  </span>
-    </button>
-   
-            </form>
-           
         </div>
     )
-}
+  }
 
-export default Form
+export default conditions-d-utilisation

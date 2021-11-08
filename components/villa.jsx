@@ -25,7 +25,7 @@ import 'swiper/css/scrollbar';
 
 const villa = () => {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8" id='villa'>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12" id='villa'>
             <div className='py-16 flex flex-1 flex-col justify-center items-center space-y-6'> 
                 <span className=''><Image src={Compass}alt=''/> </span>
             <h1 className='section-title my-5 '>VILLA TÉMOIN</h1>
@@ -63,18 +63,19 @@ const villa = () => {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide><Image src={p1}alt='' className='opacity-70 hover:opacity-100' srl_gallery_image="true"/></SwiperSlide>
-      <SwiperSlide><Image src={p2}alt='' className='opacity-70 hover:opacity-100'/></SwiperSlide>
-      <SwiperSlide><Image src={p3}alt='' className='opacity-70 hover:opacity-100'/></SwiperSlide>
-      <SwiperSlide><Image src={p4}alt='' className='opacity-70 hover:opacity-100'/></SwiperSlide>
-      <SwiperSlide><Image src={p5}alt='' className='opacity-70 hover:opacity-100'/></SwiperSlide>
-      <SwiperSlide><Image src={p6}alt='' className='opacity-70 hover:opacity-100'/></SwiperSlide>
-      <SwiperSlide><Image src={p7}alt='' className='opacity-70 hover:opacity-100'/></SwiperSlide>
-      <SwiperSlide><Image src={p8}alt='' className='opacity-70 hover:opacity-100'/></SwiperSlide>
-      <SwiperSlide><Image src={p9}alt='' className='opacity-70 hover:opacity-100'/></SwiperSlide>
-      <SwiperSlide><Image src={p10}alt='' className='opacity-70 hover:opacity-100'/></SwiperSlide>
+      <SwiperSlide><Image src={p1}alt='' className='shadow-img opacity-70 hover:opacity-100' srl_gallery_image="true"/></SwiperSlide>
+      <SwiperSlide><Image src={p2}alt='' className='shadow-img opacity-70 hover:opacity-100'/></SwiperSlide>
+      <SwiperSlide><Image src={p3}alt='' className='shadow-img opacity-70 hover:opacity-100'/></SwiperSlide>
+      <SwiperSlide><Image src={p4}alt='' className='shadow-img opacity-70 hover:opacity-100'/></SwiperSlide>
+      <SwiperSlide><Image src={p5}alt='' className='shadow-img opacity-70 hover:opacity-100'/></SwiperSlide>
+      <SwiperSlide><Image src={p6}alt='' className='shadow-img opacity-70 hover:opacity-100'/></SwiperSlide>
+      <SwiperSlide><Image src={p7}alt='' className=' shadow-img opacity-70 hover:opacity-100'/></SwiperSlide>
+      <SwiperSlide><Image src={p8}alt='' className='shadow-img opacity-70 hover:opacity-100'/></SwiperSlide>
+      <SwiperSlide><Image src={p9}alt='' className='shadow-img opacity-70 hover:opacity-100'/></SwiperSlide>
+      <SwiperSlide><Image src={p10}alt='' className='shadow-img opacity-70 hover:opacity-100'/></SwiperSlide>
     </Swiper>
          </SRLWrapper>
+         <div className='mb-20'></div>
             </div>
     )
 }
