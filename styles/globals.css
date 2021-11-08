@@ -1,0 +1,271 @@
+:root {
+  --color-btn: #c79539;
+  --color-secondary: #ecc94b;
+  /* ... */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  padding: 4px 2px;
+  margin-right: 10px;
+  display: inline-block;
+}
+a svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navlink {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.2;
+  text-transform: uppercase;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  color: black;
+  text-align: center;
+}
+.navlink-white {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.2;
+  text-transform: uppercase;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  color: white;
+  text-align: center;
+}
+
+.navlink:hover {
+  color: #c79539;
+}
+
+.navlink-white:hover {
+  color: #c79539;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  animation: opacity 0.4s ease;
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  z-index: 999;
+}
+
+.btn-color {
+  color: #fff;
+  background-color: #c79539 !important;
+  font-size: 16px;
+  padding: 15px 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.banner {
+  position: relative;
+  z-index: 5;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.banner iframe {
+  position: absolute;
+  height: 100%;
+  weight: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(1.3);
+  object-fit: cover;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .banner iframe {
+    height: 75vh;
+    transform: scale(2.6);
+  }
+}
+
+.banner-modal {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.section-title {
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 25px;
+  color: #b9821f;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333333;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.section-p {
+  line-height: 2;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  color: #c79539 !important;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  color: #c79539 !important;
+  font-weight: black !important;
+  margin-right: 20px;
+}
+
+.swiper-container {
+  width: 480px;
+}
+
+@media screen and (min-width: 640px) {
+  .swiper-container {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .swiper-container {
+    width: 1366px;
+  }
+}
+
+.swiper {
+  padding: 30px;
+}
+
+.bg-access {
+  background: url("../public/png/access-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.access-options {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .access-options {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+ul li:before {
+  content: "\2022";
+  color: #b9821f;
+  font-weight: 700;
+  display: inline-block;
+  width: 1 em;
+  margin-left: -1 em;
+}
+
+.inputs {
+  opacity: 0.5;
+  border: 1px solid gray;
+  border-radius: 0px;
+  height: 35px;
+  width: 100%;
+  text-align: left;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  margin-top: 12px;
+  padding: 30px;
+  width: 570px;
+  overflow: hidden;
+}
+
+.term-ctn {
+  width: 570px;
+  padding: 20px;
+}
+
+.btn-submit {
+  margin-left: 50%;
+  width: 50%;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .inputs {
+    opacity: 0.5;
+    border: 1px solid gray;
+    border-radius: 0px;
+    height: 35px;
+    width: 100%;
+    text-align: left;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-top: 12px;
+    padding: 30px;
+    width: 360px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .term-ctn {
+    width: 360px;
+    padding: 20px;
+  }
+
+  .btn-submit {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.footer-ctn {
+  background-color: #333;
+}
+
+.section-p2 {
+  line-height: 2;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
