@@ -55,7 +55,7 @@ const footer = () => {
       spyThrottle={500}
       className='navlink-white'
 >
-  L'accès
+  L&apos;accès
 </Link>
 <Link activeClass="active"
       to='contact'
@@ -73,18 +73,18 @@ const footer = () => {
 </Link>
                     </div>
                     <div className='w-full px-6 md:px-0 md:w-1/3 flex flex-col space-y-3 py-6  text-white'>
-                    <div className='flex flex-row items-center justify-center space-x-2'>
-                      <div><Image src={MapIcon} width={25} height={25} /></div>
+                    <div className='flex flex-row items-center justify-start lg:justify-center space-x-2'>
+                      <div><Image src={MapIcon} width={25} height={25} alt='' /></div>
                       <div className='text-sm'>Route 3009 – Près de la gare de Bouskoura Casablanca 27182</div>
                     </div>
                     <br/>
-                    <div className='flex flex-row items-center justify-center space-x-2'>
-                    <div><Image src={CallIcon} width={25} height={25}/></div>
+                    <div className='flex flex-row items-center justify-start lg:justify-center space-x-2'>
+                    <div><Image src={CallIcon} width={25} height={25} alt=''/></div>
                     <div className='text-sm'>+212 522 781 781 | +212 661 510 510</div>
                     </div>
                     <br/>
-                    <div className='flex flex-row items-center justify-center space-x-2'>
-                    <div><Image src={MailIcon} width={25} height={25}/></div>
+                    <div className='flex flex-row items-center justify-start lg:justify-center space-x-2'>
+                    <div><Image src={MailIcon} width={25} height={25} alt=''/></div>
                     <div className='text-sm'>  contact@oreedesbois.ma</div>
                     </div>
                     </div>

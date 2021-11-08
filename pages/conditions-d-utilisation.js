@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Home() {
+export default function Conditions() {
     return (
       <div className=''>
            <h4 className='section-subtitle'>Le présent site est publié par :</h4>
@@ -19,4 +19,4 @@ export default function Home() {
     )
   }
 
-export default conditions-d-utilisation
+
