@@ -163,7 +163,7 @@ export default function Example() {
 <svg xmlns="http://www.w3.org/2000/svg" height="28px" width="28px" viewBox="-461 463 36 36"><path d="M-461 463h36v36h-36v-36z" fill="none"/><path d="M-432.5 481h3c0-7.5-6-13.5-13.5-13.5v3c5.8 0 10.5 4.7 10.5 10.5zm-6 0h3c0-4.1-3.4-7.5-7.5-7.5v3c2.5 0 4.5 2 4.5 4.5zm-2.7 8.1c-4.2-2.2-7.7-5.6-9.9-9.9l3.8-3.8-.9-7.9h-8.3c-.9 15.3 11.7 27.8 27 27v-8.3l-7.9-.9-3.8 3.8z" fill="#c93"/>
                 </svg>
                </a>
-               <span className='font-bold'>+ 212 6 61 510 510</span>
+               <span className='font-bold lg:inline-block hidden'>+ 212 6 61 510 510</span>
             </a>
           </div>
         </div>

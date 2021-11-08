@@ -54,7 +54,8 @@ const villa = () => {
     // when window width is >= 768px
     1366: {
       width: 1366,
-      slidesPerView: 3,
+      slidesPerView: 5,
+      spaceBetween: 20,
     },
   }}
       navigation

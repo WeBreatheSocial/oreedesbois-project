@@ -7,6 +7,7 @@ import Villa from '../components/villa'
 import Access from '../components/access'
 import Contact from '../components/contact'
 import Footer from '../components/footer'
+import SideMenu from '../components/sidemenu'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <meta name="description" content="Orée des Bois - Landing Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <SideMenu />
       <Header />
       <Banner />
       <Projet />
