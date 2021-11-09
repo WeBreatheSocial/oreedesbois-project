@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
         </Head>
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHLVBBZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+className='gtm-script'></iframe></noscript>
         <body>
           <Main />
           <NextScript />

@@ -8,6 +8,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.gtm-script {
+  height: 0;
+  width: 0;
+  display: none;
+  visibility:hidden;
+}
 html,
 body {
   padding: 0;
