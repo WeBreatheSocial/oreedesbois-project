@@ -8,6 +8,8 @@ import Access from '../components/access'
 import Contact from '../components/contact'
 import Footer from '../components/footer'
 import SideMenu from '../components/sidemenu'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 export default function Home() {
   return (

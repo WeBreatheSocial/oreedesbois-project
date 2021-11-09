@@ -4,6 +4,8 @@ import Send from '../public/svg/send.svg'
 import PureModal from 'react-pure-modal';
 import { useRouter } from "next/router";
 import 'react-pure-modal/dist/react-pure-modal.min.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 
 const Form = () => {
@@ -11,9 +13,9 @@ const Form = () => {
     const [Phone, setPhone] = useState('');
     const [Email, setEmail] = useState('');
     const [Message, setMessage] = useState('');
-
     const [modal, setModal] = useState(false);
     const router = useRouter();
+    
 
     const submitForm = async (e) => {
         e.preventDefault()
@@ -28,10 +30,11 @@ const Form = () => {
     
       // console.log(Name, Company, Email)
       if (res.status === 201) {
-        alert('Envoi confirmé', { type: 'success' });
+        toast('Merci de nous avoir contacté!', { type: 'success' });
+        // alert('Envoi confirmé', { type: 'success' });
         router.push('/');
       } else {
-        alert('Veuillez vérifier vos informations', { type: 'error' });
+        toast('Il y a eu une erreur lors de la transmission de vos données. Veuillez nous contacter par téléphone ou réessayer ultérieurement.', { type: 'error' });
       }
       router.push('/');
       // alert(JSON.stringify({ Name, Company, Number, Email, Website, Message }));
@@ -41,7 +44,6 @@ const Form = () => {
         <div className='mx-auto'>
            <PureModal
   header="NOTICE LÉGALE"
- 
   width='90vw'
   isOpen={modal}
   closeButton="X"
@@ -66,6 +68,7 @@ const Form = () => {
   <p className='text-xs md:section-p'>Le présent site et ses mentions légales sont soumis au droit marocain.</p>
   </div>
 </PureModal>
+<ToastContainer />
               <form method="POST" onSubmit={submitForm} className=' flex flex-col py-6  w-full mx-auto justify-center items-start'>
                 <input
               name="Name"
