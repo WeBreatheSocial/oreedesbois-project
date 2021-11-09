@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-499 501 24 24"><path d="M-499 501h24v24h-24v-24z" fill="none"/><path d="M-485.6 506.1l4.1 4.1v9.7h-11v-13.8h6.9m-.7 4.8h3.8l-3.8-3.8v3.8m-3.5 3.5h5.5V513h-5.5v1.4m0 2.7h5.5v-1.4h-5.5v1.4m5-13.1h-9.9v18h15.2v-12.7l-.6-.6-4.1-4.1-.6-.6z" fill="#b9821f"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-499 501 24 24" style="enable-background:new -499 501 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#B9821F;}
+</style>
+<path class="st0" d="M-499,501h24v24h-24V501z"/>
+<path class="st1" d="M-485.6,506.1l4.1,4.1v9.7h-11v-13.8H-485.6 M-486.3,510.9h3.8l-3.8-3.8V510.9 M-489.8,514.4h5.5V513h-5.5
+	V514.4 M-489.8,517.1h5.5v-1.4h-5.5V517.1 M-484.8,504h-0.9h-6.9h-2.1v2.1v13.8v2.1h2.1h11h2.1v-2.1v-9.7v-0.9l-0.6-0.6l-4.1-4.1
+	L-484.8,504L-484.8,504z"/>
+</svg>

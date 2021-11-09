@@ -59,11 +59,11 @@ a svg {
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
-  border: 1px solid gray;
+  border: 1px solid #e7c579;
   border-radius: 0px;
   outline: none;
   transition-duration: 0.3s;
-  background-color: #c79539;
+  background-color: #f9f9f97b;
   cursor: pointer;
 }
 
@@ -102,6 +102,10 @@ a svg {
   color: black;
   text-align: center;
 }
+/* .active {
+  color: #c79539;
+} */
+
 .navlink-white {
   font-size: 16px;
   font-weight: 600;
@@ -591,7 +595,7 @@ ul li:before {
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     font-size: 12px;
   }

@@ -5,8 +5,9 @@ import Pin from '../public/svg/access.svg'
 
 const access = () => {
     return (
-        <div className="bg-access mx-auto px-4 sm:px-6 py-2" id='access'>
-            <div className='max-w-6xl mx-auto  flex flex-1 flex-col lg:flex-row justify-center items-center py-32'> 
+      <div >
+        <div className="bg-access mx-auto px-4 sm:px-6 py-2" id='access' >
+            <div className='max-w-6xl mx-auto  flex flex-1 flex-col lg:flex-row justify-center items-center py-32' > 
             <div className='mx-auto lg:w-2/5 w-full px-6 lg:px-0'>
             <span className='block text-center lg:text-left'><Image src={Pin} alt='' width={50}/> </span>
             <h1 className='section-title my-5 text-center lg:text-left'> PLAN D&apos;ACCÈS</h1>
@@ -34,6 +35,7 @@ const access = () => {
              </div>
             </div>
             </div>
+        </div>
         </div>
     )
 }
