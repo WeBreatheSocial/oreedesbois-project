@@ -154,6 +154,26 @@ a svg {
   transition: 0.3s ease-in-out;
 }
 
+.showside {
+
+  position: fixed;
+  top: 25%;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  transition: .35s;
+
+}
+.hiddenside {
+  position: fixed;
+  top: 25%;
+  z-index: 999;
+  display: flex;
+  right: -450px;
+  flex-direction: row;
+  transition: .35s;
+}
+
 .banner {
   position: relative;
   z-index: 5;
@@ -356,23 +376,15 @@ ul li:before {
     margin-left: auto;
     margin-right: auto;
   }
+
+  
   .hiddenside {
     position: fixed;
-    top: 25%;
+    top: calc(100vh - 2.5rem);
     z-index: 999;
     display: flex;
     flex-direction: row;
-    right: -32px;
-    transition: 350ms;
-  }
-  
-  .showside {
-    position: fixed;
-    top: 25%;
-    z-index: 999;
-    display: flex;
-    flex-direction: row;
-    right: 100px;
+    right: calc(-100vw - 22%);
     transition: 350ms;
   }
   
@@ -413,15 +425,7 @@ ul li:before {
 
 
 
-.hiddenside {
-  position: fixed;
-  top: 25%;
-  z-index: 999;
-  display: flex;
-  flex-direction: row;
-  right: -428px;
-  transition: 350ms;
-}
+
 
 .showside {
   position: fixed;
@@ -463,15 +467,7 @@ ul li:before {
 
 
 @media (max-width:600px) {
-  .hiddenside {
-    position: fixed;
-    top: calc(100vh - 40px);
-    z-index: 999;
-    display: flex;
-    flex-direction: row;
-    right: -428px;
-    transition: 350ms;
-  }
+
   .showside {
     position: fixed;
     bottom: 0px;
@@ -637,7 +633,8 @@ ul li:before {
     transition: 350ms;
   }
 }
-@media (min-height:667px) and (max-height: 680px) {
+
+@media (min-height:668px) and (max-height: 680px) {
   h6 {
     font-size: 12px !important;
   }
@@ -647,7 +644,16 @@ ul li:before {
     z-index: 999;
     display: flex;
     flex-direction: row;
-    right: calc(-100vw - 6vw);
+    right: -416px;
+    transition: 350ms;
+  }
+    .showside {
+    position: fixed;
+    top: 14%;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    right: 0px;
     transition: 350ms;
   }
 }
@@ -688,5 +694,26 @@ span img {
   overflow: hidden;
   padding: 0;
   position: relative;
+}
+
+@media screen and (max-width: 320px) {
+  .hiddenside {
+    position: fixed;
+    top: calc(100vh - 40px);
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    right: -416px;
+    transition: 350ms;
+  }
+    .showside {
+    position: fixed;
+    top: 14%;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    right: 0px;
+    transition: 350ms;
+  }
 }
 

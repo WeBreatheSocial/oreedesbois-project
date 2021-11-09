@@ -12,7 +12,7 @@ const sidecontact = () => {
             {/* <span className='block text-center '><Image src={Contact} alt='' width={50}/> </span> */}
             <h1 className='section-title my-2 text-center'> CONTACT</h1>
             <h6 className='text-sm my-2 text-center'> RÉSERVEZ VOTRE RENDEZ-VOUS DÈS MAINTENANT</h6>
-            <h6 className='section-subtitle my-2 text-center'>Nous reviendrons vers vous au plus vite.</h6>
+            <h6 className='section-subtitle my-2 text-center uppercase'>Nous reviendrons vers vous au plus vite.</h6>
             </div>
           <Form />
             </div>

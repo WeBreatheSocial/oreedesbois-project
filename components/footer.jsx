@@ -10,9 +10,9 @@ const footer = () => {
     return (
         <div className='footer-ctn'>
             <div className='max-w-6xl mx-auto lg:px-12 px-8'> 
-            <div className='py-12 flex flex-1 md:flex-row flex-col justify-between items-center space-y-6'>
+            <div className='py-8 lg:py-12 flex flex-1 md:flex-row flex-col justify-between items-center space-y-6'>
                     <div className='w-full md:w-1/3 px-6 md:px-0 text-center md:text-justify'><Image src={Logo} alt=''/>
-                    <p className='section-p2 text-sm md:text-base py-6 text-center md:text-justify'>Koutoubia Littaamir Holding occupe aujourd’hui une place de choix dans le secteur de l’immobilier et est reconnue pour la qualité et le sérieux de ses services.</p>
+                    <p className='section-p2 text-sm md:text-base py-2 lg:py-6 text-center md:text-justify'>Koutoubia Littaamir Holding occupe aujourd’hui une place de choix dans le secteur de l’immobilier et est reconnue pour la qualité et le sérieux de ses services.</p>
                     </div>
                     <div className='md:flex hidden w-full md:w-1/3 px-6 md:px-0 md:flex-col md:items-between md:justify-between space-y-4'>
                     <Link activeClass="active"
@@ -72,17 +72,20 @@ const footer = () => {
   Contact
 </Link>
                     </div>
-                    <div className='w-full px-6 md:px-0 md:w-1/3 flex flex-col space-y-3 py-6  text-white'>
-                    <div className='flex flex-row items-center justify-start  space-x-2'>
+                    <div className='w-full px-6 md:px-0 md:w-1/3 flex flex-col  py-2 lg:py-6  text-white space-y-5'>
+                    <div className='flex flex-row  justify-start  space-x-2'>
                       <div><Image src={MapIcon} width='40px' height='40px' alt='' /></div>
                       <div className='text-sm'>Route 3009 – Près de la gare de Bouskoura Casablanca 27182</div>
                     </div>
-                    <br/>
+                    
                     <div className='flex flex-row items-center justify-start  space-x-2'>
                     <div><Image src={CallIcon} width='20px' height='20px' alt=''/></div>
-                    <div className='text-sm'>+212 522 781 781 | +212 661 510 510</div>
+                    <div className='text-sm'>
+                      <p>+212 522 781 781</p>
+                      <p>+212 661 510 510</p>
                     </div>
-                    <br/>
+                    </div>
+                    
                     <div className='flex flex-row items-center justify-start  space-x-2'>
                     <div><Image src={MailIcon} width='22px' height='22px' alt=''/></div>
                     <div className='text-sm'>  contact@oreedesbois.ma</div>
