@@ -30,13 +30,14 @@ const Form = () => {
     
       // console.log(Name, Company, Email)
       if (res.status === 201) {
-        toast('Merci de nous avoir contacté!', { type: 'success' });
+        toast('Félicitations ! Votre formulaire a été rempli avec succès. L’un de nos commerciaux vous contactera dans les plus brefs délais', { type: 'success' });
+        location.reload()
         // alert('Envoi confirmé', { type: 'success' });
-        router.push('/');
       } else {
         toast('Il y a eu une erreur lors de la transmission de vos données. Veuillez nous contacter par téléphone ou réessayer ultérieurement.', { type: 'error' });
+        location.reload()
       }
-      router.push('/');
+      
       // alert(JSON.stringify({ Name, Company, Number, Email, Website, Message }));
     }
 
@@ -69,7 +70,7 @@ const Form = () => {
   </div>
 </PureModal>
 <ToastContainer />
-              <form method="POST" onSubmit={submitForm} className=' flex flex-col py-6  w-full mx-auto justify-center items-start'>
+              <form method="POST" autoComplete="off" onSubmit={submitForm} className=' flex flex-col py-6  w-full mx-auto justify-center items-start'>
                 <input
               name="Name"
               id="Name"

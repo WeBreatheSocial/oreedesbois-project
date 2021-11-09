@@ -7,12 +7,11 @@ const banner = () => {
         <section className='banner py-5 max-w-9xl' id='banner'>
          <div className='banner-modal absolute z-50 h-screen w-screen top-0 left-0'> 
          <div className="text-ctn-banner flex flex-col items-center justify-center  mt-48 space-y-12 px-6">
-         <div> <h1 className='text-2xl text-white font-bold text-center'> TERRAINS POUR VILLAS À BOUSKOURA  </h1> </div>
-
-   <div>  <h1 className='text-base text-white font-normal text-center'> À partir de 4600Dhs/m²  </h1>
+         <div> <h1 className='text-3xl lg:text-4xl text-white font-bold text-center'>LOTS DE TERRAINS POUR VILLAS À BOUSKOURA </h1> </div>
+         <div> <h1 className='text-xl lg:text-2xl text-white font-bold text-center'>De 250m² à 500m² </h1> </div>
+   <div>  <h1 className='text-base lg:text-lg text-white font-normal text-center'> À partir de 4600Dhs/m²  </h1>
    </div>     
-    <div>  <button className='btn-color'> 
-    <Link to='contact'
+    <div> <Link to='contact'
       spy={true}
       smooth={true}
       hashSpy={true}
@@ -21,9 +20,10 @@ const banner = () => {
       isDynamic={true}
       ignoreCancelEvents={false}
       spyThrottle={500}>
-    <span className='btn-text'>Réservez Maintenant</span>
-    </Link>
+    <button className='btn-color'> 
+    Réservez Maintenant
     </button>
+    </Link>
    </div> 
        </div>
         </div>
