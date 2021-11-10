@@ -77,8 +77,9 @@ const Newsideform = () => {
         <div className={popOpen ? 'sticky-popup sticky-popup-right open_sticky_popup_right popup-content-bounce-in-right open open_sticky_popup_right' : 'sticky-popup closed-sticky-popup-right open_sticky_popup_right popup-content-bounce-in-right'}>
         <div className='popup-wrap'>
         <div className='popup-header'  onClick={handlePopup}>
-        <Image src={Contact} alt='' width={30}/>
-            <span className='popup-title'>
+        {/* <Image src={Contact} alt='' width={30}/> */}
+        <h1 className='popup-maintitle text-center text-white mt-2 h-2'>☒</h1>
+            <span className='popup-title text-justify'>
             Contact 
             <div className='popup-image relative'>
                 
@@ -87,12 +88,11 @@ const Newsideform = () => {
 
             </div>
             <div className='popup-content'>
-            
                 <div className='popup-content-pad'>
                 <h1 className='popup-maintitle my-2 text-center'> CONTACT</h1>
                     <p className='uppercase'>RÉSERVEZ VOTRE RENDEZ-VOUS DÈS MAINTENANT</p>
                     <p className='uppercase'>NOUS REVIENDRONS VERS VOUS AU PLUS VITE.</p>
-                    <form method="POST" onSubmit={submitForm} autoComplete="off" className=' flex flex-col w-full mx-auto justify-center items-start'>
+                    <form lang='fr' method="POST" onSubmit={submitForm} autoComplete="off" className=' flex flex-col w-full mx-auto justify-center items-start'>
                 <input
               name="Name"
               id="Name"
@@ -103,7 +103,7 @@ const Newsideform = () => {
               placeholder="Nom et Prénom"
               className='sideinputs'
               value={Name}
-              autofocus
+              autoFocus
             onChange={(e) => setName(e.target.value)}
             />
              <input
