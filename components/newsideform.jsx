@@ -31,9 +31,9 @@ const Newsideform = () => {
 
 
     const submitForm = async (e) => {
-        e.preventDefault()
-        setSubmitted(true)
-       const res = await fetch('/api/submit-form', {
+      e.preventDefault()
+      setSubmitted(true)
+      const res = await fetch('/api/submit-form', {
         method: 'POST',
         headers: {
           'Access-Control-Allow-Origin': '*',
@@ -54,10 +54,10 @@ const Newsideform = () => {
           setFailed(true);
         }
       }, 800);
-      setTimeout(() => {
-          setFailed(false);
-          setConfirmed(false);
-      }, 4000);
+      // setTimeout(() => {
+      //     setFailed(false);
+      //     setConfirmed(false);
+      // }, 4000);
     }
 
     return (
@@ -120,13 +120,15 @@ const Newsideform = () => {
       />
       <p className='font-thin text-xs'>Envoi en cours...</p>
             </div>
-            <div className={confirmed ? 'h-auto flex flex-col justify-between items-center space-y-6 opacity-100 transition-all mx-auto' : 'hidden transition-all opacity-0'}>
+            <div className={confirmed ? 'h-auto flex flex-col px-6 justify-between items-center space-y-6 opacity-100 transition-all mx-auto' : 'hidden transition-all opacity-0'}>
               {/* <Image src={Checkmark} alt=''/> */}
             <Image src={checkMark} alt='' width={50} height={50}/>
-            <h4 className='section-subtitle mt-5 text-center uppercase'>Félicitations ! Votre formulaire a été rempli avec succès.</h4>
+            <h4 className='section-subtitle mt-5 text-center uppercase'>Félicitations ! 
+            <br/>
+            Votre formulaire a été rempli avec succès.</h4>
               <p className='section-p'>L’un de nos commerciaux vous contactera dans les plus brefs délais </p>
             </div>
-            <div className={failed ? 'h-auto flex flex-col justify-between items-center space-y-6 opacity-100 transition-all mx-auto' : 'hidden transition-all opacity-0'}>
+            <div className={failed ? 'h-auto flex flex-col px-6 justify-between items-center space-y-6 opacity-100 transition-all mx-auto' : 'hidden transition-all opacity-0'}>
               {/* <Image src={Checkmark} alt=''/> */}
             <Image src={redx} alt='' width={50} height={50}/>
             <h4 className='section-subtitle mt-5 text-center uppercase'>Il y a eu une erreur lors de la transmission de vos données.</h4>

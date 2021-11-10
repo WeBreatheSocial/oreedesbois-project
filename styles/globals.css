@@ -126,7 +126,7 @@ a svg {
 }
 
 .navlink:hover {
-  color: #a59b87;
+  color: #c79539;
   transition: 350ms;
 }
 
@@ -752,7 +752,7 @@ span img {
     max-width: 100%;
     overflow-x: hidden;
     overflow-y:auto;
-    height: 600px;
+    height: 560px;
     background-color: #fefefe;
     border: 1px solid hsl(0, 0%, 92%);
 }
@@ -1227,4 +1227,9 @@ span img {
   margin-left: auto !important;
   margin-right: auto !important;
   text-align: center !important;
+}
+
+.alert-frame {
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px; 
+  padding: 20px 20px 40px 20px;
 }

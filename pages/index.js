@@ -20,7 +20,7 @@ export default function Home() {
         <meta name="description" content="Orée des Bois - Landing Page" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <SideMenuN/>
+      <SideMenuN />
       {/* <SideMenu /> */}
       <Header />
       <Banner />
