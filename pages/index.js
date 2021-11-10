@@ -18,7 +18,7 @@ export default function Home() {
       <Head>
         <title>Orée des Bois</title>
         <meta name="description" content="Orée des Bois - Landing Page" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <SideMenuN/>
       {/* <SideMenu /> */}
