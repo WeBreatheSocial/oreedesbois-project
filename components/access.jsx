@@ -6,22 +6,22 @@ import Pin from '../public/svg/access.svg'
 const access = () => {
     return (
       <div >
-        <div className="bg-access mx-auto px-4 sm:px-6 py-2" id='access' >
-            <div className='max-w-6xl mx-auto  flex flex-1 flex-col lg:flex-row justify-center items-center py-6 lg:py-32' > 
-            <div className='mx-auto lg:w-2/5 w-full px-6 lg:px-0'>
-            <span className='block text-center lg:text-left'><Image src={Pin} alt='' width='50px'/> </span>
+        <div className="bg-access py-2" id='access' >
+            <div className='mx-auto max-w-6xl  lg:px-12 px-8   flex flex-1 flex-col lg:flex-row justify-center items-center py-6 lg:py-32' > 
+            <div className='mx-auto lg:w-2/5 w-full px-0'>
+            <span className='block text-center lg:text-left'><Image src={Pin} alt='' width='60px' height={60}/> </span>
             <h1 className='section-title my-5 text-center lg:text-left'> PLAN D&apos;ACCÈS</h1>
             <h4 className='section-subtitle my-5 text-center lg:text-left'> SITUÉ DANS L’UNE DES PLUS BELLES ADRESSES À BOUSKOURA</h4>
             <p className='section-p my-5'>Orée des Bois, un projet de Koutoubia Littaamir qui s’engage à vous proposer les meilleurs lots de villa à proximité de toutes commodités : </p>
             <div className='access-options'> 
-            <ul className='w-full lg:w-1/2 lg:mx-0 mx-auto px-6 lg:px-0 section-p'>
+            <ul className='w-full lg:w-1/2 lg:mx-0 mx-auto px-0 section-p'>
             <li> Commerces </li>
              <li> Clubs de sports </li>
            <li> Gare de Bouskoura </li>
               <li> Écoles </li>
               <li> Hammams et SPA </li>
              </ul>
-            <ul className='w-full lg:w-1/2 lg:mx-0 mx-auto px-6 lg:px-0 section-p'>
+            <ul className='w-full lg:w-1/2 lg:mx-0 mx-auto px-0 section-p'>
               <li> Supermarchés </li>
               <li> Restaurants </li>
              <li> Golf </li>

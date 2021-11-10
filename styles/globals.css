@@ -286,6 +286,7 @@ a svg {
   flex-direction: column;
   text-align: left;
 }
+
 @media screen and (min-width: 768px) {
   .access-options {
     display: flex;
@@ -317,6 +318,7 @@ ul li:before {
   width: 570px;
   overflow: hidden;
 }
+
 .sideinputs {
   opacity: 0.5;
   border: 1px solid gray;
@@ -352,6 +354,7 @@ ul li:before {
 }
 
 @media screen and (max-width: 600px) {
+
   .inputs {
     opacity: 0.5;
     border: 1px solid gray;
@@ -368,6 +371,7 @@ ul li:before {
     margin-left: auto;
     margin-right: auto;
   }
+
   .sideinputs {
     opacity: 0.5;
     border: 1px solid gray;
@@ -383,7 +387,6 @@ ul li:before {
     margin-left: auto;
     margin-right: auto;
   }
-
   
   .hiddenside {
     position: fixed;
@@ -395,10 +398,10 @@ ul li:before {
     transition: 350ms;
   }
   
-  .sidebtn-submit {
+  /* .sidebtn-submit {
     margin-left: 50%;
     width: 100%;
-  }
+  } */
 
   .term-ctn {
     width: 100%;
@@ -408,7 +411,7 @@ ul li:before {
   .btn-submit {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 90%;
     margin-top: 20px;
   }
   .banner {
@@ -445,8 +448,8 @@ ul li:before {
 }
 
 .sidebtn-submit {
-  margin-left: 50%;
-  width: 50%;
+  /* margin-left: 50%; */
+  width: 100%;
 }
 
 
@@ -584,8 +587,6 @@ ul li:before {
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
-  
-
   .inputs {
     opacity: 0.5;
     border: 1px solid gray;
@@ -653,7 +654,7 @@ ul li:before {
 
 @media (max-width:388px) {
   .inputs {
-    width: calc(100vw - 50px);
+    width: 80vw;
   }
 }
 
@@ -850,7 +851,8 @@ span img {
 .sticky-popup-right .popup-header
 {
     width: 35px;
-    margin-top: 35%;
+    /* margin-top: 35%; */
+    margin-top: 0%;
     float: left;
     height: 160px;
     border-radius: 0px 0 0 0px;
@@ -860,7 +862,8 @@ span img {
 .closed-sticky-popup-right .popup-header
 {
     width: 35px;
-    margin-top: 35%;
+    /* margin-top: 35%; */
+    margin-top: 0%;
     float: left;
     height: 160px;
     border-radius: 0px 0 0 0px;
@@ -931,10 +934,12 @@ span img {
 .sticky-popup-right .popup-content
 {    
     width: auto;
+    box-shadow: 0 2px 8px 0 rgb(99 99 99 / 20%) !important;
 }
 .closed-sticky-popup-right .popup-content
 {    
     width: auto;
+    box-shadow: 0 2px 8px 0 rgb(99 99 99 / 20%) !important;
 }
 .open_sticky_popup_right{
     -webkit-transition: right .8s;
@@ -1200,5 +1205,26 @@ span img {
 }
 
 .popup-terms {
-  font-size: 12px;
+  font-size: 11px;
 } 
+
+@media screen and (max-width: 600px) {
+  .sticky-popup
+  {
+    position: fixed;	
+    width: 350px;
+    visibility: visible;	
+      z-index: 501;
+      top: 17%;
+  }
+}
+
+.minusclose {
+  height: 35px;width: auto;
+}
+
+#headlessui-popover-panel-10 {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}

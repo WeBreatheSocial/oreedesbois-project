@@ -5,15 +5,15 @@ import Compass from '../public/svg/projet.svg'
 
 const projet = () => {
     return (
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:py-8" id='projet'>
+        <div className="max-w-6xl mx-auto   lg:px-12 px-8 lg:py-12 " id='projet'>
             <div className='flex flex-1 flex-col lg:flex-row justify-center items-center'> 
-            <div className='mx-auto lg:w-1/2 w-full px-6 lg:px-0'>
-            <span className='lg:hidden block text-center lg:text-left'><Image src={Compass} alt='' width='50px'/> </span>
+            <div className='mx-auto lg:w-1/2 w-full  lg:px-0'>
+            <span className='lg:hidden block text-center lg:text-left mt-5'><Image src={Compass} alt='' width='60px' height={60}/> </span>
             <h1 className='section-title my-5 lg:hidden block text-center '> LE PROJET</h1>
             <h4 className='section-subtitle my-5 lg:hidden block text-center'> CONSTRUISEZ VOTRE VILLA DE RÊVE SUR MESURE !</h4>
             <Image src={Projet} alt=''/>
             </div>
-            <div className='mx-auto lg:w-1/2 w-full px-6 lg:px-0 space-y-2'>
+            <div className='mx-auto lg:w-1/2 w-full  space-y-2'>
                 <span className='lg:block hidden'><Image src={Compass}alt=''/> </span>
             <h1 className='section-title my-5 lg:block hidden'> LE PROJET</h1>
             <h4 className='section-subtitle my-5 lg:block hidden'> CONSTRUISEZ VOTRE VILLA DE RÊVE SUR MESURE !</h4>

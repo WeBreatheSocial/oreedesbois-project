@@ -25,12 +25,11 @@ import 'swiper/css/scrollbar';
 
 const villa = () => {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:py-12" id='villa'>
+      <div className="max-w-6xl mx-auto   lg:px-12 px-8 lg:py-12" id='villa'>
             <div className='py-16 flex flex-1 flex-col justify-center items-center space-y-6'> 
-                <span className=''><Image src={Compass} alt='' width='50px'/> </span>
-            <h1 className='section-title my-5 '>VILLA TÉMOIN</h1>
+                <span className=''><Image src={Compass} alt='' width='60px' height={60}/> </span>
+            <h1 className='section-title my-5'>VILLA TÉMOIN</h1>
                         <h4 className='section-subtitle my-5'> UNE IMMERSION DANS VOTRE FUTUR CHEZ-VOUS</h4>
-
             </div>
                 <SRLWrapper>
 

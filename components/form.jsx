@@ -6,6 +6,11 @@ import { useRouter } from "next/router";
 import 'react-pure-modal/dist/react-pure-modal.min.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import { SpinnerCircular } from 'spinners-react';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
+import checkMark from '../public/png/done.png'
+import redx from '../public/png/error.png'
 
 
 const Form = () => {
@@ -15,31 +20,40 @@ const Form = () => {
     const [Message, setMessage] = useState('');
     const [modal, setModal] = useState(false);
     const router = useRouter();
+    const [submitted, setSubmitted] = useState(false);
+    const [confirmed, setConfirmed] = useState(false);
+    const [failed, setFailed] = useState(false);
     
 
     const submitForm = async (e) => {
         e.preventDefault()
-       const res = await fetch('/api/submit-form', {
-        method: 'POST',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
-        // body: JSON.stringify(Email.value),
-        body: JSON.stringify({ Name, Phone, Email, Message }),
-      });
-    
-      // console.log(Name, Company, Email)
-      if (res.status === 201) {
-        toast('Félicitations ! Votre formulaire a été rempli avec succès. L’un de nos commerciaux vous contactera dans les plus brefs délais', { type: 'success' });
-        location.reload()
-        // alert('Envoi confirmé', { type: 'success' });
-      } else {
-        toast('Il y a eu une erreur lors de la transmission de vos données. Veuillez nous contacter par téléphone ou réessayer ultérieurement.', { type: 'error' });
-        location.reload()
+        setSubmitted(true)
+        const res = await fetch('/api/submit-form', {
+          method: 'POST',
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
+          // body: JSON.stringify(Email.value),
+          body: JSON.stringify({ Name, Phone, Email, Message }),
+        });
+        setName('')
+        setPhone('')
+        setEmail('')
+        setMessage('')
+        setTimeout(() => {
+          if (res.status === 201) {
+            setSubmitted(false);
+            setConfirmed(true); 
+          } else {
+            setSubmitted(false);
+            setFailed(true);
+          }
+        }, 800);
+        setTimeout(() => {
+            setFailed(false);
+            setConfirmed(false);
+        }, 4000);
       }
-      
-      // alert(JSON.stringify({ Name, Company, Number, Email, Website, Message }));
-    }
 
     return (
         <div className='mx-auto'>
@@ -70,7 +84,33 @@ const Form = () => {
   </div>
 </PureModal>
 <ToastContainer />
-              <form method="POST" autoComplete="off" onSubmit={submitForm} className=' flex flex-col py-6  w-full mx-auto justify-center items-start'>
+            <div className={submitted ? 'flex flex-col text-center py-6 w-full mx-auto justify-center items-center opacity-100 transition-all duration-300 ease-in' : 'hidden opacity-0 transition-all'}>
+              {/* <Image src={Checkmark} alt=''/> */}
+              <Loader
+        type="ThreeDots"
+        color="#c79539"
+        height={100}
+        width={100}
+        visible={submitted}
+      />
+      <p className='font-thin text-base'>Envoi en cours...</p>
+            </div>
+            <div className={confirmed ? 'h-auto flex flex-col justify-between items-center space-y-6 opacity-100 transition-all mx-auto' : 'hidden transition-all opacity-0'}>
+              {/* <Image src={Checkmark} alt=''/> */}
+            <Image src={checkMark} alt='' width={50} height={50}/>
+            <h4 className='section-subtitle mt-5 text-center uppercase'>Félicitations ! Votre formulaire a été rempli avec succès.</h4>
+              <p className='section-p'>L’un de nos commerciaux vous contactera dans les plus brefs délais </p>
+            </div>
+            <div className={failed ? 'h-auto flex flex-col justify-between items-center space-y-6 opacity-100 transition-all mx-auto' : 'hidden transition-all opacity-0'}>
+              {/* <Image src={Checkmark} alt=''/> */}
+            <Image src={redx} alt='' width={50} height={50}/>
+            <h4 className='section-subtitle mt-5 text-center uppercase'>Il y a eu une erreur lors de la transmission de vos données.</h4>
+              <p className='section-p'>Veuillez nous contacter par téléphone ou réessayer ultérieurement.</p>
+            </div>
+            <div className={submitted ? 'hidden' : 'block'}>
+                <div className={confirmed ? 'hidden' : 'block'}>
+                <div className={failed ? 'hidden' : 'block'}>
+              <form method="POST" autoComplete="off" onSubmit={submitForm} className='flex flex-col py-6  w-full mx-auto justify-center items-start opacity-100 transition-all duration-300 ease-in'>
                 <input
               name="Name"
               id="Name"
@@ -81,7 +121,7 @@ const Form = () => {
               placeholder="Nom et Prénom"
               className='inputs'
               value={Name}
-              autofocus
+              autoFocus
             onChange={(e) => setName(e.target.value)}
             />
              <input
@@ -91,7 +131,6 @@ const Form = () => {
               pattern=".{1,}"
               required
               className='inputs'
-
               title="1 caractère minimum"
               placeholder="Email"
               value={Email}
@@ -101,11 +140,10 @@ const Form = () => {
               name="Phone"
               id="Phone"
               className='inputs'
-
               type="text"
               pattern=".{1,}"
               required
-              title="1 caractère minimum"
+              title="10 caractères minimum"
               placeholder="Numéro de téléphone"
               value={Phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -140,6 +178,9 @@ const Form = () => {
    
             </form>
            
+        </div>
+        </div>
+        </div>
         </div>
     )
 }

@@ -6,6 +6,10 @@ import Contact from '../public/svg/sideform.svg'
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
+import checkMark from '../public/png/done.png'
+import redx from '../public/png/error.png'
 
 const Newsideform = () => {
     const [Name, setName] = useState('');
@@ -16,13 +20,19 @@ const Newsideform = () => {
     const [modal, setModal] = useState(false);
     const [popOpen, setPopOpen] = useState(true);
     const router = useRouter();
+    const [submitted, setSubmitted] = useState(false);
+    const [confirmed, setConfirmed] = useState(false);
+    const [failed, setFailed] = useState(false);
 
     const handlePopup = () => {
         setPopOpen(!popOpen);
     }
 
+
+
     const submitForm = async (e) => {
         e.preventDefault()
+        setSubmitted(true)
        const res = await fetch('/api/submit-form', {
         method: 'POST',
         headers: {
@@ -31,17 +41,23 @@ const Newsideform = () => {
         // body: JSON.stringify(Email.value),
         body: JSON.stringify({ Name, Phone, Email, Message }),
       });
-    
-      // console.log(Name, Company, Email)
-      if (res.status === 201) {
-        toast('Merci de nous avoir contacté!', { type: 'success' });
-        location.reload()
-        // alert('Envoi confirmé', { type: 'success' });
-      } else {
-        toast('Il y a eu une erreur lors de la transmission de vos données. Veuillez nous contacter par téléphone ou réessayer ultérieurement.', { type: 'error' });
-        location.reload()
-      }
-      // alert(JSON.stringify({ Name, Company, Number, Email, Website, Message }));
+      setName('')
+      setPhone('')
+      setEmail('')
+      setMessage('')
+      setTimeout(() => {
+        if (res.status === 201) {
+          setSubmitted(false);
+          setConfirmed(true); 
+        } else {
+          setSubmitted(false);
+          setFailed(true);
+        }
+      }, 800);
+      setTimeout(() => {
+          setFailed(false);
+          setConfirmed(false);
+      }, 4000);
     }
 
     return (
@@ -77,22 +93,52 @@ const Newsideform = () => {
         <div className={popOpen ? 'sticky-popup sticky-popup-right open_sticky_popup_right popup-content-bounce-in-right open open_sticky_popup_right' : 'sticky-popup closed-sticky-popup-right open_sticky_popup_right popup-content-bounce-in-right'}>
         <div className='popup-wrap'>
         <div className='popup-header'  onClick={handlePopup}>
-        {/* <Image src={Contact} alt='' width={30}/> */}
-        <h1 className='popup-maintitle text-center text-white mt-2 h-2'>☒</h1>
-            <span className='popup-title text-justify'>
+        <div className={popOpen ? 'hidden' : 'block minusclose'}>
+        <Image src={Contact} alt='' height={35} width={35}/>
+        </div>
+        <div className={popOpen ? 'block font-bold text-white text-center minusclose' : 'hidden'}>
+        <h1 className=''>-</h1>
+        </div>
+            <span className='popup-title text-justify text-base text-white font-medium uppercase'>
             Contact 
             <div className='popup-image relative'>
-                
+              
             </div>
             </span>
 
             </div>
             <div className='popup-content'>
+            <h1 className='popup-maintitle my-2 text-center'>CONTACT</h1>
+            <div className={submitted ? 'h-auto flex flex-col justify-between items-center space-y-6 opacity-100 transition-all mx-auto' : 'hidden transition-all opacity-0'}>
+              {/* <Image src={Checkmark} alt=''/> */}
+              <Loader
+        type="ThreeDots"
+        color="#c79539"
+        height={100}
+        width={100}
+        visible={submitted}
+      />
+      <p className='font-thin text-xs'>Envoi en cours...</p>
+            </div>
+            <div className={confirmed ? 'h-auto flex flex-col justify-between items-center space-y-6 opacity-100 transition-all mx-auto' : 'hidden transition-all opacity-0'}>
+              {/* <Image src={Checkmark} alt=''/> */}
+            <Image src={checkMark} alt='' width={50} height={50}/>
+            <h4 className='section-subtitle mt-5 text-center uppercase'>Félicitations ! Votre formulaire a été rempli avec succès.</h4>
+              <p className='section-p'>L’un de nos commerciaux vous contactera dans les plus brefs délais </p>
+            </div>
+            <div className={failed ? 'h-auto flex flex-col justify-between items-center space-y-6 opacity-100 transition-all mx-auto' : 'hidden transition-all opacity-0'}>
+              {/* <Image src={Checkmark} alt=''/> */}
+            <Image src={redx} alt='' width={50} height={50}/>
+            <h4 className='section-subtitle mt-5 text-center uppercase'>Il y a eu une erreur lors de la transmission de vos données.</h4>
+              <p className='section-p'>Veuillez nous contacter par téléphone ou réessayer ultérieurement.</p>
+            </div>
                 <div className='popup-content-pad'>
-                <h1 className='popup-maintitle my-2 text-center'> CONTACT</h1>
-                    <p className='uppercase'>RÉSERVEZ VOTRE RENDEZ-VOUS DÈS MAINTENANT</p>
-                    <p className='uppercase'>NOUS REVIENDRONS VERS VOUS AU PLUS VITE.</p>
-                    <form lang='fr' method="POST" onSubmit={submitForm} autoComplete="off" className=' flex flex-col w-full mx-auto justify-center items-start'>
+                <div className={submitted ? 'hidden' : 'block'}>
+                <div className={confirmed ? 'hidden' : 'block'}>
+                <div className={failed ? 'hidden' : 'block'}>
+                    <p className='uppercase font-medium'>RÉSERVEZ VOTRE RENDEZ-VOUS DÈS MAINTENANT</p>
+                    <p className='section-p uppercase'>NOUS REVIENDRONS VERS VOUS AU PLUS VITE.</p>
+                    <form id='sideForm' lang='fr' method="POST" onSubmit={submitForm} autoComplete="off" className=' flex flex-col w-full mx-auto justify-center items-start'>
                 <input
               name="Name"
               id="Name"
@@ -161,6 +207,9 @@ const Newsideform = () => {
     </button>
    
             </form>
+            </div>
+            </div>
+            </div>
                 </div>
             </div>
             </div>
