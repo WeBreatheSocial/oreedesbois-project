@@ -71,7 +71,7 @@ const footer = () => {
 >
   Contact
 </Link>
-                    </div>
+</div>
                     <div className='w-full px-6 md:px-0 md:w-1/3 flex flex-col  py-2 lg:py-6  text-white space-y-5 lg:space-y-8'>
                     <div className='flex flex-row  justify-start  space-x-2'>
                       <div><Image src={MapIcon} width='40px' height='40px' alt='' /></div>

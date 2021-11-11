@@ -215,6 +215,9 @@ a svg {
 
 .banner-modal {
   background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-title {
@@ -1232,4 +1235,8 @@ span img {
 .alert-frame {
   box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px; 
   padding: 20px 20px 40px 20px;
+}
+
+.text-ctn-banner {
+  margin-top: 
 }
