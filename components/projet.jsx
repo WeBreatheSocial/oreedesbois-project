@@ -17,7 +17,14 @@ const projet = () => {
                 <span className='lg:block hidden'><Image src={Compass}alt=''/> </span>
             <h1 className='section-title my-5 lg:block hidden'> LE PROJET</h1>
             <h4 className='section-subtitle my-5 lg:block hidden'> CONSTRUISEZ VOTRE VILLA DE RÊVE SUR MESURE !</h4>
-            <p className='section-p my-5'>Orée des bois est un projet de Koutoubia Littaamir Holding, qui comporte des lots de terrains pour villas d’une superficie allant de 250 m² jusqu’à 500 m² à un prix défiant toute concurrence. Située dans un quartier d’avenir à Bouskoura et à seulement 15 minutes de Casablanca, vous profiterez d’une adresse où nature et calme rythmeront votre quotidien en famille. Le chemin vers votre rêve commence avec Orée des bois, obtenez votre lot de villa à Bouskoura à partir de 4600 DH/m² seulement ! Réservez dès maintenant votre visite en remplissant le formulaire sur notre site. </p>
+            <p className='section-p my-5'>Orée des bois est un projet de Koutoubia Littaamir, qui comporte des lots de terrains pour villas d’une superficie allant de 250 m² jusqu’à 500 m² à un prix défiant toute concurrence.  <br/>
+Située dans un quartier d’avenir à Bouskoura et à seulement 15 minutes de Casablanca, votre nouvelle adresse se distinguera par un calme qui rythmera votre quotidien en famille. <br/>
+
+Le chemin vers votre rêve commence avec Orée des bois, obtenez votre lot de villa à Bouskoura à partir de 4600 DH/m² seulement ! <br/>
+Les titres fonciers sont disponibles et la livraison est immédiate. <br/>
+
+Réservez dès maintenant votre visite en remplissant le formulaire sur notre site.
+</p>
             </div>
             </div>
         </div>
