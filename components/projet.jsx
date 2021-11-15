@@ -22,7 +22,6 @@ Située dans un quartier d’avenir à Bouskoura et à seulement 15 minutes de C
 
 Le chemin vers votre rêve commence avec Orée des bois, obtenez votre lot de villa à Bouskoura à partir de 4600 DH/m² seulement ! <br/>
 Les titres fonciers sont disponibles et la livraison est immédiate. <br/>
-
 Réservez dès maintenant votre visite en remplissant le formulaire sur notre site.
 </p>
             </div>
