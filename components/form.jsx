@@ -49,7 +49,7 @@ const Form = () => {
       setSubmitted(true);
       console.log(data);
       setTimeout(() => {  setSubmitted(false); }, 2000);
-      setConfirmed(true);
+      setTimeout(() => {  setConfirmed(true); }, 2000);
       axios
         .post("/api/submit-form", {
           email: data.email,
